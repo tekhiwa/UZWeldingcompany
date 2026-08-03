@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U & Z Welding Company</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">U & Z Welding</h2>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button id="menu-btn">☰</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Strong Steel. Quality Work.</h1>
+        <p>Professional welding, fabrication, gates, windows, roofing, and metal construction services.</p>
+        <a href="#" class="btn">Our Services</a>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <div class="card">
+            <img src="images/gate.jpg" alt="">
+            <h3>Steel Gates</h3>
+            <p>Custom security and decorative gates.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/window.webp" alt="">
+            <h3>Window Frames</h3>
+            <p>Durable steel window frames.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/stair cases.jpg" alt="">
+            <h3>Stair Cases</h3>
+            <p>Custom metal staircase and handrail.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Us</h2>
+    <p>
+        U & Z Welding Company provides reliable welding and metal fabrication
+        services with high-quality workmanship, affordable pricing, and customer satisfaction.
+    </p>
+</section>
+
+<section class="contact">
+    <h2>Need Our Services?</h2>
+    <a href="#" class="btn">Contact Us</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 U & Z Welding Company. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+// Toggle menu
+menuBtn.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent the document click from firing
+    navLinks.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+});
+
+// Prevent closing when clicking inside the menu
+navLinks.addEventListener("click", function(e) {
+    e.stopPropagation();
+});
+
+// Close menu when clicking anywhere else
+document.addEventListener("click", function() {
+    navLinks.classList.remove("active");
+    menuBtn.classList.remove("active");
+});
+</script>
+</body>
+</html>

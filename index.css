@@ -59,7 +59,7 @@ nav{
 .hero{
     height:80vh;
     background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-    url("images/welding.webp");
+    url("Images/welding.webp");
     background-size:cover;
     background-position:center;
     display:flex;

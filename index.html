@@ -13,10 +13,11 @@
         <h2 class="logo">U & Z Welding</h2>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
 
         <button id="menu-btn">☰</button>
@@ -27,7 +28,7 @@
     <div class="hero-content">
         <h1>Strong Steel. Quality Work.</h1>
         <p>Professional welding, fabrication, gates, windows, roofing, and metal construction services.</p>
-        <a href="#" class="btn">Our Services</a>
+        <a href="Services.html" class="btn">Our Services</a>
     </div>
 </section>
 
@@ -37,19 +38,19 @@
     <div class="service-container">
 
         <div class="card">
-            <img src="Images/gate.jpg">
+            <img src="Images/gate.jpg" alt="">
             <h3>Steel Gates</h3>
             <p>Custom security and decorative gates.</p>
         </div>
 
         <div class="card">
-            <img src="Images/window.webp">
+            <img src="Images/window.webp" alt="">
             <h3>Window Frames</h3>
             <p>Durable steel window frames.</p>
         </div>
 
         <div class="card">
-            <img src="Images/stair cases.jpg">
+            <img src="Images/stair cases.jpg" alt="">
             <h3>Stair Cases</h3>
             <p>Custom metal staircase and handrail.</p>
         </div>
@@ -67,7 +68,7 @@
 
 <section class="contact">
     <h2>Need Our Services?</h2>
-    <a href="#" class="btn">Contact Us</a>
+    <a href="Contact.html" class="btn">Contact Us</a>
 </section>
 
 <footer>
@@ -78,19 +79,16 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-// Toggle menu
 menuBtn.addEventListener("click", function(e) {
-    e.stopPropagation(); // Prevent the document click from firing
+    e.stopPropagation();
     navLinks.classList.toggle("active");
     menuBtn.classList.toggle("active");
 });
 
-// Prevent closing when clicking inside the menu
 navLinks.addEventListener("click", function(e) {
     e.stopPropagation();
 });
 
-// Close menu when clicking anywhere else
 document.addEventListener("click", function() {
     navLinks.classList.remove("active");
     menuBtn.classList.remove("active");

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U & Z Welding Company</title>
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">U & Z Welding</h2>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button id="menu-btn">☰</button>
+    </nav>
+</header>
+
+
+    
+    <section class="feedback-section">
+
+        <h1>Customer Feedback</h1>
+        <p>
+            We value your opinion. Rate our work and tell us about your
+            experience with our steel fabrication services.
+        </p>
+
+        <form id="feedbackForm">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name (Optional)"
+                >
+            </div>
+
+            <div class="form-group">
+
+                <label>Rate Our Service</label>
+
+                <div class="rating">
+
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="comment">Your Comment</label>
+
+                <textarea
+                    id="comment"
+                    rows="5"
+                    placeholder="Share your experience..."
+                    required
+                ></textarea>
+
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </section>
+
+    
+    <section class="reviews">
+
+        <h2>What Our Customers Say</h2>
+
+        <div id="reviewsContainer"></div>
+
+    </section>
+
+<footer>
+    <p>&copy; 2026 U & Z Welding Company. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", function(e) {
+    e.stopPropagation();
+    navLinks.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+});
+
+navLinks.addEventListener("click", function(e) {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", function() {
+    navLinks.classList.remove("active");
+    menuBtn.classList.remove("active");
+});
+
+const form = document.getElementById("feedbackForm");
+        const reviewsContainer = document.getElementById("reviewsContainer");
+
+        form.addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim() || "Anonymous";
+
+            const comment =
+                document.getElementById("comment").value.trim();
+
+            const rating =
+                document.querySelector('input[name="rating"]:checked');
+
+            if (!rating) {
+                alert("Please select a rating.");
+                return;
+            }
+
+            const reviewCard = document.createElement("div");
+            reviewCard.classList.add("review-card");
+
+            reviewCard.innerHTML = `
+                <h3>${name}</h3>
+                <div class="stars">${"★".repeat(rating.value)}</div>
+                <p>${comment}</p>
+            `;
+
+            reviewsContainer.prepend(reviewCard);
+
+            form.reset();
+        });
+</script>
+</body>
+</html>

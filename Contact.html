@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | U & Z Welding</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+
+<header>
+
+<nav>
+
+    <h2 class="logo">U & Z Welding</h2>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Feedback.html">Feedback</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button id="menu-btn">☰</button>
+
+</nav>
+
+</header>
+
+<section class="about">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+        We'd love to hear from you. Whether you need a quotation,
+        custom steel fabrication, welding services, or repairs,
+        our team is ready to assist.
+    </p>
+
+    <br>
+
+    <div class="service-container">
+
+        <div class="card">
+            <h3>📍 Address</h3>
+            <p>
+                Manje, Industrial Area<br>
+                Blantyre, Malawi
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Phone</h3>
+            <p>
+                +265 990 277 380<br>
+                +265 885 755 140
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📧 Email</h3>
+            <p>
+                info@U & Z Welding.com<br>
+                sales@U & Z Welding.com
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact">
+
+    <h2>Send Us a Message</h2>
+
+    <form class="feedback-form">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input
+                type="text"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input
+                type="tel"
+                placeholder="Enter your phone number"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Subject</label>
+            <input
+                type="text"
+                placeholder="Message subject"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Your Message</label>
+            <textarea
+                rows="6"
+                placeholder="Write your message..."
+                required
+            ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+<section class="about">
+
+    <h2>Business Hours</h2>
+
+    <p>
+        <strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM<br><br>
+
+        <strong>Saturday:</strong> 8:00 AM - 1:00 PM<br><br>
+
+        <strong>Sunday:</strong> Closed
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>&copy; 2026 U & Z Welding. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+
+});
+
+</script>
+
+</body>
+</html>
